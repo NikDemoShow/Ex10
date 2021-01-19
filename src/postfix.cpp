@@ -20,14 +20,14 @@ std::string infix2postfix(std::string infix) {
           oprtrs.push(infix[i]);
         }
       } else {
-        while (priority(oprtrs.get()) >= priority(infix[i])) {
+        while (!oprtrs.isEmpty() && (priority(oprtrs.get()) >= priority(infix[i]))) {
           rez += oprtrs.pop();
           rez += ' ';
         }
         if (oprtrs.get() == '(') {
           oprtrs.pop();
         }
-        if (infix[i] != ')' && infix[i] != '\0') {
+        if (infix[i] != ')') {
           oprtrs.push(infix[i]);
         }
       }
