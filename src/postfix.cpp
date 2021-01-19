@@ -62,4 +62,3 @@ int16_t priority(char el) {
 bool isnumber(char el) {
     return el >= 48 && el <= 57;
 }
-s
