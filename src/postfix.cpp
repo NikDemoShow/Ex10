@@ -9,8 +9,9 @@ std::string infix2postfix(std::string infix) {
       if (infix[i] >= 48 && infix[i] <= 57) {
         rez += infix[i];
         rez +=  ' ';
-      }
-      else if (oprtrs.isEmpty() || priority(infix[i]) > priority(oprtrs.get()) || !priority(infix[i])) {
+      } else if (oprtrs.isEmpty() ||
+          priority(infix[i]) > priority(oprtrs.get()) ||
+          !priority(infix[i])) {
         if (infix[i] != ')') {
           oprtrs.push(infix[i]);
         }
@@ -37,8 +38,7 @@ std::string infix2postfix(std::string infix) {
 }
 
 int16_t priority(char el) {
-  switch (el)
-  {
+  switch (el) {
   case '(':
     return 0;
   case ')':
