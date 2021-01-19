@@ -1,9 +1,9 @@
 // Copyright NikDemoShow 2020
-#ifndef POSTFIX_H
-#define POSTFIX_H
+#ifndef INCLUDE_POSTFIX_H_
+#define INCLUDE_POSTFIX_H_
 #include<string>
 #include<iostream>
 #include"MyStack.h"
 std::string infix2postfix(std::string infix);
-short int priority(char el);
-#endif POSTFIX_H
+int16_t priority(char el);
+#endif INCLUDE_POSTFIX_H_
