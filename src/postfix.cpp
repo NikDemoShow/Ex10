@@ -8,7 +8,9 @@ std::string infix2postfix(std::string infix) {
     if (infix[i] != ' ') {
       if (isnumber(infix[i]) || infix[i] == '.') {
         rez += infix[i];
-        if (i == infix.size() - 1 || i != infix.size() - 1 && (!isnumber(infix[i + 1]) && infix[i + 1] != '.')) {
+        if (i == infix.size() - 1 ||
+            i != infix.size() - 1 &&
+            (!isnumber(infix[i + 1]) && infix[i + 1] != '.')) {
             rez += ' ';
         }
       } else if (oprtrs.isEmpty() ||
@@ -35,6 +37,7 @@ std::string infix2postfix(std::string infix) {
     rez += oprtrs.pop();
     rez += ' ';
   }
+  rez.erase(rez.size() - 1, 1);
   return rez;
 }
 
