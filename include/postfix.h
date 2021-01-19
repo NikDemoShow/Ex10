@@ -6,4 +6,5 @@
 #include"MyStack.h"
 std::string infix2postfix(std::string infix);
 int16_t priority(char el);
-#endif // INCLUDE_POSTFIX_H_
+bool isnumber(char el);
+#endif  // INCLUDE_POSTFIX_H_
