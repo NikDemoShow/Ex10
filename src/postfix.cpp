@@ -20,7 +20,8 @@ std::string infix2postfix(std::string infix) {
           oprtrs.push(infix[i]);
         }
       } else {
-        while (!oprtrs.isEmpty() && (priority(oprtrs.get()) >= priority(infix[i]))) {
+        while (!oprtrs.isEmpty() &&
+            (priority(oprtrs.get()) >= priority(infix[i]))) {
           rez += oprtrs.pop();
           rez += ' ';
         }
@@ -61,3 +62,4 @@ int16_t priority(char el) {
 bool isnumber(char el) {
     return el >= 48 && el <= 57;
 }
+s
