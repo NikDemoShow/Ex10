@@ -1,8 +1,9 @@
-// Copyright 2020 A.SHT
-#ifndef INCLUDE_POSTFIX_H_
-#define INCLUDE_POSTFIX_H_
-#include <string>
-
+// Copyright NikDemoShow 2020
+#ifndef POSTFIX_H
+#define POSTFIX_H
+#include<string>
+#include<iostream>
+#include"MyStack.h"
 std::string infix2postfix(std::string infix);
-
-#endif  // INCLUDE_POSTFIX_H_
+short int priority(char el);
+#endif POSTFIX_H
