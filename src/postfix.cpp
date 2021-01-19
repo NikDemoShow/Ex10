@@ -27,7 +27,7 @@ std::string infix2postfix(std::string infix) {
         if (oprtrs.get() == '(') {
           oprtrs.pop();
         }
-        if (infix[i] != ')') {
+        if (infix[i] != ')' && infix[i] != '\0') {
           oprtrs.push(infix[i]);
         }
       }
